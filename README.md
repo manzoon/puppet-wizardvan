@@ -1,4 +1,5 @@
 # Puppet-Wizardvan
+[![Puppet Forge](http://img.shields.io/puppetforge/v/jlk/wizardvan.svg)](https://forge.puppetlabs.com/jlk/wizardvan)
 
 Installs and manages the Sensu metrics relay "Wizardvan" (AKA [sensu-metrics-relay](https://github.com/opower/sensu-metrics-relay)) 
 
