@@ -1,0 +1,22 @@
+{
+  "name": "jlk-wizardvan",
+  "version": "1.0.0",
+  "author": "John Kinsella",
+  "summary": "A module to install the sensu metrics relay WizardVan",
+  "license": "Apache 2.0",
+  "source": "https://github.com/jlk/puppet-wizardvan",
+  "project_page": "https://github.com/jlk/puppet-wizardvan",
+  "issues_url": "https://github.com/jlk/puppet-wizardvan/issues",
+  "tags": [ "sensu", "graphite", "opentsdb", "monitoring" ],
+  "operatingsystem_support": [
+    { "operatingsystem": "Ubuntu", "operatingsystemrelease": [ "14.04" ] }
+  ],
+  "requirements": [
+    { "name": "puppet", "version_requirement": ">=3.4.3 <5.0.0" }
+  ],
+  "dependencies": [
+    { "name": "puppetlabs/vcsrepo", "version_requirement": ">=1.2.0 <2.0.0" },
+    { "name": "puppetlabs/stdlib", "version_requirement": ">=4.6.0 <5.0.0" },
+    { "name": "sensu/sensu", "version_requirement": ">=2.0.0 <4.0.0" }
+  ]
+}

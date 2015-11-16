@@ -1,0 +1,19 @@
+{
+  "relay": {
+<% if @graphite_relay == true -%>
+    "graphite": {
+      "host": "<%= scope.lookupvar("wizardvan::graphite_host") %>",
+      "port": <%= scope.lookupvar("wizardvan::graphite_port") %>,
+      "max_queue_size": <%= scope.lookupvar("wizardvan::graphite_max_queue_size") %>
+<% end -%>
+<% if @tsdb_relay == true -%>
+<% if @graphite_relay == true -%>
+    },
+<% end -%>
+    "opentsdb": {
+      "host": "<%= scope.lookupvar("wizardvan::tsdb_host") %>",
+      "port": <%= scope.lookupvar("wizardvan::tsdb_port")%>
+<% end -%>
+    }
+  }
+}
