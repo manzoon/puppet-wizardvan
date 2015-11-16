@@ -1,9 +1,6 @@
 # Puppet-Wizardvan
 
-Installs and manages the "Wizardvan" (AKA sensu-metrics-relay) Sensu metrics relay
-
-the open source monitoring framework [Sensu](http://sensuapp.org).
-[![Puppet Forge](http://img.shields.io/puppetforge/v/sensu/sensu.svg)](https://forge.puppetlabs.com/sensu/sensu)
+Installs and manages the Sensu metrics relay "Wizardvan" (AKA [sensu-metrics-relay](https://github.com/opower/sensu-metrics-relay)) 
 
 ## Installation
 
