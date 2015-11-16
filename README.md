@@ -30,41 +30,49 @@ See `metadata.json` for details.
 ###`wv_dest`
 
 String. Location to download wizardvan to from github
+
 Default: /usr/local/lib/sensu-metrics-relay
 
 ###`graphite_relay`
 
 Boolean. Specifies if data should be relayed to a graphite server
+
 Default: true
 
 ###`graphite_host`
 
 String. Graphite server hostname or IP address
+
 Default: localhost
 
 ###`graphite_port`
 
 Integer. Port on graphite host to connect to
+
 Default: 2003
 
 ###`graphite_max_queue_size`
 
 Integer. Maximum queue size for sending to graphite
+
 Default: 16384
 
 ###`tsdb_relay`
 
 Boolean. Specifies if data should be relayed to an openTSDB server
+
 Default: false
 
 ###`tsdb_host`
 
 String. OpenTSDB server hostname or IP address
+
 Default: localhost
 
 ###`tsdb_port`
 
 Integer. Port on OpenTSDB host to connect to
+
 Default: 4424
 
 ## License
