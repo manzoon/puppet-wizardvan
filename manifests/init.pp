@@ -89,7 +89,7 @@ class wizardvan (
   if $::bios_version == 'VirtualBox' {
     $config_relay_template = "/tmp/vagrant-puppet/modules-f2a3e880375508488722eafa8258d2eb/wizardvan/templates/config.json.erb"
   } else {
-    $config_relay_template = 'puppet:///modules/wizardvan/config.json.erb'
+    $config_relay_template = 'wizardvan/config.json.erb'
   }
 
   file { '/etc/sensu/conf.d/config_relay.json':
