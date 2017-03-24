@@ -62,7 +62,7 @@ class wizardvan (
   $tsdb_relay              = false,
   $tsdb_host               = 'localhost',
   $tsdb_port               = 4424,
-  $wv_dest                 = '/usr/local/lib/sensu-metrics-relay'
+  $wv_dest                 = '/usr/local/lib/sensu-metrics-relay',
   $wv_repo                 = 'https://github.com/grepory/wizardvan.git'
 ) {
   validate_bool($graphite_relay, $tsdb_relay)
