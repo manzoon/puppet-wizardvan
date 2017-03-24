@@ -22,6 +22,10 @@
 #   String. Location to download wizardvan to from github
 #   Default: /usr/local/lib/sensu-metrics-relay
 #
+# [*wv_repo*]
+#   String. WizardVan Github repository url
+#   Default: https://github.com/grepory/wizardvan.git
+#
 # [*graphite_relay*]
 #   Boolean. Specifies if data should be relayed to a graphite server
 #   Default: true
@@ -59,6 +63,7 @@ class wizardvan (
   $tsdb_host               = 'localhost',
   $tsdb_port               = 4424,
   $wv_dest                 = '/usr/local/lib/sensu-metrics-relay'
+  $wv_repo                 = 'https://github.com/grepory/wizardvan.git'
 ) {
   validate_bool($graphite_relay, $tsdb_relay)
   if !is_integer($graphite_port) { fail('graphite_port must be an integer') }
@@ -68,7 +73,7 @@ class wizardvan (
   vcsrepo { $wv_dest:
     ensure    => present,
     provider  => git,
-    source    => 'https://github.com/opower/sensu-metrics-relay.git',
+    source    => $wv_repo,
     require   => [File['/etc/sensu/conf.d/config_relay.json'],Package['git']],
     notify    => Exec['copywizardvanfiles'];
   }
